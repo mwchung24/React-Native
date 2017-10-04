@@ -7,18 +7,27 @@ export default class Name extends React.Component {
 
     this.state = {showText: true};
 
-    setInterval(() => {
-      this.setState(previousState => {
-        return { showText: !previousState.showText };
-      });
-    }, 1000);
+    // Will make the text BLINK
+    // setInterval(() => {
+    //   this.setState(previousState => {
+    //     return { showText: !previousState.showText };
+    //   });
+    // }, 1000);
   }
   render() {
     let display = this.state.showText ? 'Hello ' + this.props.name + '!' : ' ';
     return (
       <View>
-        <Text>{display}</Text>
+        <Text style={this.props.style}>{display}</Text>
       </View>
     );
   }
 }
+
+// const styles = StyleSheet.create({
+//   firstName: {
+//     color: 'blue',
+//     fontWeight: 'bold',
+//     fontSize: 30,
+//   }
+// });

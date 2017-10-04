@@ -9,10 +9,10 @@ export default class App extends React.Component {
     };
     return (
       <View style={styles.container}>
-        <Name name='Martin'></Name>
-        <Name name='Hanna' />
+        <Name style={styles.firstName} name='Martin'></Name>
+        <Name style={styles.secondName} name='Hanna' />
         <Name name='Calvin' />
-        <Image source={pic} style={picStyles.container}/>
+        <Image source={pic} style={styles.picture}/>
       </View>
     );
   }
@@ -25,11 +25,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
-
-const picStyles = StyleSheet.create({
-  container: {
+  picture: {
     width: 300,
     height: 100,
-  }
+  },
+  firstName: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 30,
+    backgroundColor: 'orange',
+  },
+  secondName: {
+    color: 'red',
+    fontSize: 50,
+  },
 });
