@@ -1,18 +1,32 @@
 import React from 'react';
-import { StyleSheet, Text, View, AppRegistry, Image } from 'react-native';
+import { StyleSheet, Text, View, AppRegistry, Image, TextInput } from 'react-native';
 import Name from './names.js';
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: '',
+    };
+
+  }
+
   render() {
     let pic = {
       uri: 'https://www.contactcenterworld.com/images/company/NICE-Systems-600px-logo.jpg'
     };
     return (
       <View style={styles.container}>
+        <TextInput style={styles.input}
+          placeholder='Enter your name!'
+          onChangeText={(text) => this.setState({text: text})}
+        />
         <Name style={styles.firstName} name='Martin'></Name>
         <Name style={styles.secondName} name='Hanna' />
         <Name name='Calvin' />
+        <Name name={this.state.text} />
         <Image source={pic} style={styles.picture}/>
+        <View style={styles.box}/>
       </View>
     );
   }
@@ -24,6 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    // flexDirection: 'row',
   },
   picture: {
     width: 300,
@@ -39,4 +54,12 @@ const styles = StyleSheet.create({
     color: 'red',
     fontSize: 50,
   },
+  box: {
+    width: 150,
+    height: 150,
+    backgroundColor: 'steelblue',
+  },
+  input: {
+    height: 40,
+  }
 });
