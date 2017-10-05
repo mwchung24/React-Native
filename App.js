@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, AppRegistry, Image, TextInput } from 'react-native';
 import Name from './names.js';
+import Button from './button.js';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -27,6 +28,7 @@ export default class App extends React.Component {
         <Name name={this.state.text} />
         <Image source={pic} style={styles.picture}/>
         <View style={styles.box}/>
+        <Button/>
       </View>
     );
   }
