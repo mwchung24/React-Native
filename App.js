@@ -17,7 +17,10 @@ export default class App extends React.Component {
       uri: 'https://www.contactcenterworld.com/images/company/NICE-Systems-600px-logo.jpg'
     };
     return (
-      <ScrollView>
+      <ScrollView
+        maximumZoomScale={3}
+        minimumZoomScale={1}
+      >
         <View style={styles.container}>
           <TextInput style={styles.input}
             placeholder='Enter your name!'
