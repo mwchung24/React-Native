@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, AppRegistry, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View, AppRegistry, Image, TextInput, ScrollView } from 'react-native';
 import Name from './names.js';
 import Button from './button.js';
 
@@ -17,19 +17,42 @@ export default class App extends React.Component {
       uri: 'https://www.contactcenterworld.com/images/company/NICE-Systems-600px-logo.jpg'
     };
     return (
-      <View style={styles.container}>
-        <TextInput style={styles.input}
-          placeholder='Enter your name!'
-          onChangeText={(text) => this.setState({text: text})}
-        />
-        <Name style={styles.firstName} name='Martin'></Name>
-        <Name style={styles.secondName} name='Hanna' />
-        <Name name='Calvin' />
-        <Name name={this.state.text} />
-        <Image source={pic} style={styles.picture}/>
-        <View style={styles.box}/>
-        <Button/>
-      </View>
+      <ScrollView>
+        <View style={styles.container}>
+          <TextInput style={styles.input}
+            placeholder='Enter your name!'
+            onChangeText={(text) => this.setState({text: text})}
+            />
+          <Name style={styles.firstName} name='Martin'></Name>
+          <Name style={styles.secondName} name='Hanna' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+          <Name name='Calvin' />
+
+          <Name name={this.state.text} />
+          <Image source={pic} style={styles.picture}/>
+          <View style={styles.box}/>
+          <Button/>
+        </View>
+      </ScrollView>
     );
   }
 }
@@ -40,6 +63,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 100,
+    marginBottom: 100,
     // flexDirection: 'row',
   },
   picture: {
