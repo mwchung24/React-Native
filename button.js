@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, AppRegistry, Image, TextInput, Button, Alert, TouchableHighlight, TouchableOpacity, TouchableNativeFeedback, TouchableWithoutFeedback } from 'react-native';
 
 export default class buttonTest extends React.Component {
-  _onPressButton () {
+  _onPressButton (e) {
     Alert.alert('you pressed the button');
   }
   render() {
