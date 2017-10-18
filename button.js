@@ -8,6 +8,26 @@ export default class buttonTest extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <TouchableHighlight underlayColor='white'>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>AC</Text>
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight underlayColor='white'>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>+/-</Text>
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight underlayColor='white'>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>%</Text>
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight underlayColor='white'>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>/</Text>
+          </View>
+        </TouchableHighlight>
         <TouchableHighlight onPress={this._onPressButton} underlayColor='black'>
           <View style={styles.button}>
             <Text style={styles.buttonText}>7</Text>
@@ -21,6 +41,11 @@ export default class buttonTest extends React.Component {
         <TouchableHighlight underlayColor='white'>
           <View style={styles.button}>
             <Text style={styles.buttonText}>9</Text>
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight underlayColor='white'>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>X</Text>
           </View>
         </TouchableHighlight>
         <TouchableHighlight underlayColor='white'>
@@ -40,6 +65,11 @@ export default class buttonTest extends React.Component {
         </TouchableHighlight>
         <TouchableHighlight underlayColor='white'>
           <View style={styles.button}>
+            <Text style={styles.buttonText}>-</Text>
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight underlayColor='white'>
+          <View style={styles.button}>
             <Text style={styles.buttonText}>1</Text>
           </View>
         </TouchableHighlight>
@@ -53,6 +83,26 @@ export default class buttonTest extends React.Component {
             <Text style={styles.buttonText}>3</Text>
           </View>
         </TouchableHighlight>
+        <TouchableHighlight underlayColor='white'>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>+</Text>
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight underlayColor='black'>
+          <View style={styles.buttonZero}>
+            <Text style={styles.buttonText}>0</Text>
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight underlayColor='white'>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>.</Text>
+          </View>
+        </TouchableHighlight>
+        <TouchableHighlight underlayColor='white'>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>=</Text>
+          </View>
+        </TouchableHighlight>
       </View>
     );
   }
@@ -62,7 +112,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    width: 300,
+    justifyContent: 'center',
   },
   button: {
     backgroundColor: 'gray',
@@ -70,12 +122,25 @@ const styles = StyleSheet.create({
     width: 70,
     height: 70,
     alignItems: 'center',
-    padding: 30,
+    padding: 20,
+    borderRadius: 4,
+    borderWidth: 1,
+    borderColor: 'black',
+  },
+  buttonZero: {
+    backgroundColor: 'gray',
+    border: 'black',
+    width: 140,
+    height: 70,
+    alignItems: 'center',
+    padding: 20,
     borderRadius: 4,
     borderWidth: 1,
     borderColor: 'black',
   },
   buttonText: {
     color: 'black',
+    flex: 1,
+    flexDirection: 'row',
   }
 });
