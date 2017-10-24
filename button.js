@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, View, AppRegistry, Image, TextInput, Button, Alert, TouchableHighlight, TouchableOpacity, TouchableNativeFeedback, TouchableWithoutFeedback } from 'react-native';
 
 export default class buttonTest extends React.Component {
-  _onPressButton (e) {
-    Alert.alert('you pressed the button');
+  _onPressButton (num) {
+    Alert.alert('you pressed the ' + num);
   }
   render() {
     return (
@@ -28,7 +28,7 @@ export default class buttonTest extends React.Component {
             <Text style={styles.buttonText}>/</Text>
           </View>
         </TouchableHighlight>
-        <TouchableHighlight onPress={this._onPressButton} underlayColor='black'>
+        <TouchableHighlight onPress={this._onPressButton("7")} underlayColor='black'>
           <View style={styles.button}>
             <Text style={styles.buttonText}>7</Text>
           </View>
